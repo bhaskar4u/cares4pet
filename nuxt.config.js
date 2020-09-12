@@ -66,13 +66,21 @@ export default {
    */
   build: {
     extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.(ogg|mp3|wav|mpe?g)$/i,
-        loader: "babel-eslint",
-        options: {
-          name: "[path][name].[vue]",
-        },
-      });
+      // config.module.rules.push({
+      //   test: /\.(ogg|mp3|wav|mpe?g)$/i,
+      //   loader: "babel-eslint",
+      //   options: {
+      //     name: "[path][name].[vue]",
+      //   },
+      // });
+      if (ctx.dev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'babel-eslint',
+          exclude: /(node_modules)/
+        })
+      }
     },
   },
 };

@@ -13,21 +13,22 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.10.1",
-    "@vue/cli": "^3.11.0",
+    "@vue/cli": "^3.12.1",
     "axios": "^0.19.2",
-    "nuxt": "^2.0.0",
-    "vue-notifications": "^1.0.2"
+    "nuxt": "^2.14.4",
+    "vue-notifications": "^1.0.2",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-loader": "^3.0.2",
+    "@nuxtjs/eslint-module": "^1.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^3.0.4",
     "eslint-plugin-nuxt": "^0.4.3",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^5.2.3",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   }
 }

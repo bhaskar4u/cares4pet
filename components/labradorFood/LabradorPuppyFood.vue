@@ -1,30 +1,12 @@
 <template>
   <div class="card-columns">
-    <div class="card" v-for="post in posts" :key="post.id">
-      <ul>
-        <li>
-          <div class="name">
-            <h3>{{ post.ProductName }}</h3>
-          </div>
-          <div>
-            <img :src="`${post.ImageUrl}`" />
-          </div>
-          <div class="price">
-            <h3>
-              Price:
-              {{ post.Price }}
-            </h3>
-          </div>
-          <p>Qty:{{count}}</p>
-          <p class="control">
-            <a class="button is-primary" @click.prevent="decrementCounter">-</a>
-            <a class="button is-danger" @click.prevent="incrementCounter">+</a>
-          </p>
-
-          <!-- <button @click.prevent="decrementCounter">-</button>
-          <button @click.prevent="incrementCounter">+</button>
-
-          <button @click="click">AddTocart</button>-->
+    <!-- <div v-for="(t,index) in $store.state.posts" :key="index"></div> -->
+    <!-- {{ this.$store.state.list }} -->
+    <div>
+      <ul v-for="p  in posts" :key="p.id">
+        <li class="card" style="width:200px;">
+          <img v-bind:src="p.imageUrl" />
+          <h1>{{p.price}}</h1>
         </li>
       </ul>
     </div>
@@ -37,19 +19,24 @@ export default {
   data() {
     return {
       posts: [],
-      count: 0
+      image: ""
+      // count: 0
     };
   },
-  created() {
-    axios
-      .get("http://localhost:3800/user/getlabpuppyfood")
-      .then(doc => {
-        const postss = doc.data;
-        this.posts = postss;
-      })
-      .catch(e => {
-        console.log(e);
-      });
+  async created() {
+    const dta = await axios.get("http://localhost:8000/user/listP");
+    this.posts = dta.data;
+    this.image = dta.data.imageUrl;
+    console.log(`BackandData ${dta}`);
+    // console.log(dta.data);
+    // .then(doc => {
+    //   const postss = doc.data;
+    //   console.log(postss);
+    //   this.posts = { postss };
+    // })
+    // .catch(e => {
+    //   console.log(e);
+    // });
     // axios.get("http://localhost:3800/user/getlabpuppyfood").then(doc => {
     //   var doci = doc.data;
     //   var i;
