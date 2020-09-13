@@ -23,7 +23,7 @@ export default {
     };
   },
   mounted() {
-    Axios.get("http://13.234.66.240:8000/user/list-adult-lab-food").then(
+    Axios.get("http://13.234.66.240:8000/user/list-mature-lab-food").then(
       resData => {
         const usePost = resData.data;
         this.posts = usePost;

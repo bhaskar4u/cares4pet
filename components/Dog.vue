@@ -157,8 +157,8 @@
     </div>
   </div>-->
   <div>
-    <AdultLabradorFood />
-    <div class="row">
+    <LabradorFood />
+    <!-- <div class="row">
       <div class="col-2">
         <div class="card" style="width:300px">
           <a href="dogFood">
@@ -225,18 +225,16 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
-import Cat from "../components/Cat";
-import AdultLabradorFood from "~/components/labradorFood/AdultLabradorFood";
+import LabradorFood from "~/components/labradorFood/LabradorFood";
 
 export default {
   components: {
-    Cat,
-    AdultLabradorFood
+    LabradorFood
   }
 };
 </script>
