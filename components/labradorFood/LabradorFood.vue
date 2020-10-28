@@ -1,6 +1,7 @@
 <template>
   <div class="row">
-    <div class="col-2" style="width:200px;">
+    <div class="col-sm-6">
+    <!-- <div class="col-2" style="width:200px;"> -->
       <h3>Labrador</h3>
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVvSeeHk0UgGries33y3PQXmvafPPM-doQlw&usqp=CAU"
@@ -11,10 +12,11 @@
         <button @click="clktst2">Puppy</button>
         <button @click="clktst3">Mature</button>
       </div>
+    <!-- </div> -->
     </div>
-    <div class="col-10">
+    <div class="col-sm-6">
       <div v-if="test1 === true">
-        <h3>Adult Lab List</h3>
+        <h3>Adult Lab Food</h3>
         <AdultLabradorFood />
       </div>
       <div v-else-if="test2 ===true">

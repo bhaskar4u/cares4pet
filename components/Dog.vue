@@ -226,6 +226,7 @@
         </div>
       </div>
     </div>-->
+    <div><h1>{{ $store.getters['getJobIds'] }}</h1></div>
   </div>
 </template>
 

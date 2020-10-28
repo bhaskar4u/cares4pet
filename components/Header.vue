@@ -12,13 +12,16 @@
               </a>
             </div>
           </div>
-          <div class="col-8 col-md-8 col-xl-6">
-            <div class="sub_header_social_icon float-right">
-              <a href="#">
+          <div>
+            <h1>Welcome To Cares4pet</h1>
+          </div>
+
+          <div class="sub_header_social_icon float-right">
+            <!-- <a href="#">
                 <i class="flaticon-phone"></i>+02 213 - 256 (365)
-              </a>
-              <a href="#" class="btn_1 d-none d-md-inline-block">Become a Volunteer</a>
-            </div>
+            </a>-->
+            <!-- <a href="#" class="btn_1 d-none d-md-inline-block">Login</a> -->
+             <nuxt-link to="login" class="btn_1 d-none d-md-inline-block">login</nuxt-link>
           </div>
         </div>
       </div>
@@ -46,17 +49,24 @@
               >
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link active" href="/">Home</a>
+                    <nuxt-link class="nav-link active" to="/">Home</nuxt-link>
+                    <!-- <a class="nav-link active" href="/">Home</a> -->
                   </li>
                   <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
+                    <nuxt-link to="/about" class="nav-link">About</nuxt-link>
+                    <!-- <a href="/about" class="nav-link">About</a> -->
                   </li>
                   <li class="nav-item">
-                    <a href="/servicePage" class="nav-link">services</a>
+                    <nuxt-link class="nav-link" to="/servicePage">services</nuxt-link>
+                    <!-- <a href="/servicePage" class="nav-link">services</a> -->
                   </li>
                   <li class="nav-item">
                     <a href="/products" class="nav-link">Products</a>
                   </li>
+                  <li class="nav-item">
+                    <a href="/test" class="nav-link">Test</a>
+                  </li>
+
                   <li class="nav-item dropdown">
                     <a
                       class="nav-link dropdown-toggle"
@@ -73,10 +83,16 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                    <a href="blog.html" class="nav-link">blog</a>
+                    <nuxt-link class="nav-link" to="/blog">blog</nuxt-link>
+                    <!-- <a href="blog.html" class="nav-link">blog</a> -->
                   </li>
                   <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <nuxt-link to="/cart" class="nav-link">
+                      <Cart />
+                    </nuxt-link>
                   </li>
                 </ul>
               </div>
@@ -89,3 +105,17 @@
   <!-- Header part end-->
 </body>
 </template>
+
+<script>
+import Cart from "~/components/cart/Cart";
+export default {
+  components: {
+    Cart
+  },
+  data() {
+    return {
+      counter: 0
+    };
+  }
+};
+</script>

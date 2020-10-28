@@ -1,17 +1,35 @@
-export const state = () => ({
-    list: [
-        { name: 'bhaskar', age: 27 }
-    ]
-})
+// export const state = () => ({
+//          list: [{ name: "bhaskar", branch: "backend" }],
+//        });
+  
+//   export const mutations = {
+//     STORE_JOB_IDS(state, job_ids) {
+//       state.job_ids = job_ids;
+//     },
+//   };
 
-export const mutations = {
-    add(state, title) {
-        state.list.push(title)
-    }
-}
+  // export const actions = {
+  //   storeJobIds({ commit }, job_ids) {
+  //     commit("STORE_JOB_IDS", job_ids);
+  //   },
+  // };
+  
+  // export const getters = {
+  //          getJobIds(state) {
+  //            return state.job_ids;
+  //          },
+  //        };
+import Vuex from 'vuex'
+  import state from "./state";
+  import actions from "./actions";
+  import mutations from "./mutations";
+  import getters from "./getters";
 
-export const getters = {
-    get(state) {
-        return state.list
-    }
-}
+
+
+  export default {
+    state,
+    actions,
+    mutations,
+    getters,
+  };

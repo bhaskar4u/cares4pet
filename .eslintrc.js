@@ -5,10 +5,11 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'eslint-loader'
   },
   extends: [
-    "babel-eslint:recommended",
+    "eslint-loader:recommended",
+    // "vue-loader:recomended",
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
     "plugin:nuxt/essential",
