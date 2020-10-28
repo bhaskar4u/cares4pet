@@ -4,12 +4,9 @@
       <ul v-for="post in posts" :key="post.id">
         <li>
           <div class="card" style="width:200px;">
-            <img :src="`${post.imageUrl}`" alt="card-image" v-bind="ImageUrl" />
-            <div>
-              <h3>Price:{{ post.price }}</h3>
-            </div>
-
-            <button @click="AddToCart()">+Add</button>
+            <img :src="`${post.imageUrl}`" alt="card-image" />
+            <h3>Price:{{post.price}}</h3>
+            <button>+Add</button>
           </div>
         </li>
       </ul>
@@ -26,7 +23,7 @@ export default {
     };
   },
   mounted() {
-    Axios.get("http://65.0.80.131:8000/user/list-puppy-lab-food").then(
+    Axios.get("http://65.0.80.131:8000/user/list-mature-lab-food").then(
       resData => {
         const usePost = resData.data;
         this.posts = usePost;
